@@ -1,0 +1,63 @@
+{
+	"baseLocation": "Template2",
+    "configFilePath": "Branding.js",
+    "files":
+    [
+        "b_l.png",
+        "b_p.png",
+        "jquery-1.9.0.min.js",
+        "style_ipad.css",
+        "thumb.jpg",
+        "welcomeView.html"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait"
+    ],
+    "params":
+    [
+        {
+            "name": "introText",
+            "label": "Intro text",
+            "type": "richText",
+            "targets": ["#bottom_wrapper"],
+            "replaceContent": true,
+            "value": "<h1>Welcome.</h1><br /><p>Please tap on the thumbnail to open the latest edition of FOCUS ON PUBLIC SECTOR. <br /><br /> The first edition focuses on HIGHER EDUCATION.</p>"
+        },
+        {
+            "name": "textColor",
+            "label": "Intro text colour",
+            "type": "color",
+            "targets": ["#bottom_wrapper"],
+			"cssProperty": "color",
+            "value": "#3ba5dc"
+        },
+        {
+            "name": "bg_Landscape",
+            "label": "Background (landscape)",
+            "type": "image",
+            "screentypes": ["iPadLandscape"],
+            "targets": ["body"],
+            "cssProperty": "background-image",
+            "value": "b_l.png"
+        },
+        {
+            "name": "bg_Portrait",
+            "label": "Background (portrait)",
+            "type": "image",
+            "screentypes": ["iPadPortrait"],
+            "targets": ["body"],
+            "cssProperty": "background-image",
+            "value": "b_p.png"
+        },
+        {
+            "name": "thumbnail",
+            "label": "Edition thumbnail",
+            "type": "image",
+            "targets": ["#thumb_image"],
+            "attribute": "src",
+            "value": "thumb.jpg"
+        }
+    ]
+}

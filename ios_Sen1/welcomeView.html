@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
+  <link rel="stylesheet" type="text/css" href="welcome.css">
+  <script src="jquery-1.9.0.min.js"></script>
+  <script src="Branding.js"></script>
+</head>
+<body>
+  <div id="logo">
+    <img src="logo.png" width="100%" />
+  </div>
+
+  <div id="content">
+    <div id="left">
+      <a class="latest_link" href=""><img id="thumb_image" src="loader.jpg" height="280" /></a>
+    </div>
+    <div id="right">
+    </div>
+  </div>
+
+  <div id="buttons">
+    <a href=""><div id="but1" class="but"></div></a>
+    <a href=""><div id="but2" class="but"></div></a>
+    <a href=""><div id="but3" class="but"></div></a>
+  </div>
+
+  <div id="social">
+    <a href=""><img src="fb.jpg" /></a>
+    <a href=""><img src="twit.jpg" /></a>
+  </div>
+
+
+<script type="text/javascript">
+  $('#right').html(prose);
+
+  $('#but1').text(butTxt1);
+  $('#but2').text(butTxt2);
+  $('#but3').text(butTxt3);
+
+  $('.but').css({'background-color': butCol}); 
+
+  $('#buttons a:nth-child(1)').attr('href', butUrl1);
+  $('#buttons a:nth-child(2)').attr('href', butUrl2);
+  $('#buttons a:nth-child(3)').attr('href', butUrl3);
+
+  $('#buttons a').each(function() {
+    but = $(this).attr('href');
+    if(but == 'latest_link' || but == 'editions_link' || but == 'subscriptions_link' || but == 'downloads_link' || but == 'login_link' || but == 'logout_link') {
+      $(this).addClass(but);       
+    }
+  });
+
+  //(function() {
+  // if(social == 'yes') {
+      $('#social').css({'display': social});     
+  //  }
+  //})();
+
+  $('#social a:nth-child(1)').attr('href', soUrl1);
+  $('#social a:nth-child(2)').attr('href', soUrl2);
+</script>
+</body>
+</html>

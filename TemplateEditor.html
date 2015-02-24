@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="jquery-2.1.1.min.js"></script>
+<script src="jszip.min.js"></script>
+<script src="FileSaver.js"></script>
+<script src="ckeditor/ckeditor.js"></script>
+<script src='spectrum/spectrum.js'></script>
+<script src="src/Constants.js"></script>
+<script src="src/Debug.js"></script>
+<script src="src/DownloadManager.js"></script>
+<script src="src/DropTarget.js"></script>
+<script src="src/Error.js"></script>
+<script src="src/LocalTestData.js"></script>
+<script src="src/Preview.js"></script>
+<script src="src/PreviewManager.js"></script>
+<script src="src/ProgressIndicator.js"></script>
+<script src="src/Selector.js"></script>
+<script src="src/Editor.js"></script>
+<link rel='stylesheet' href='spectrum/spectrum.css' />
+<link rel="stylesheet" type="text/css" href="TemplateEditor.css"/>
+</head>
+<body>
+
+<script language="javascript">
+$(document).ready(function()
+{
+	new Yudu.TemplateEditor.Editor({useTemplateSelectScreenWhenLocal: false}).initialise();
+});
+</script>
+
+</body>
+</html>

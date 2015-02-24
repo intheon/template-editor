@@ -1,0 +1,184 @@
+{
+	"baseLocation": "ios_dailymail",
+    "configFilePath": "Branding.js",
+    "files":
+    [
+        "about/about.html",
+        "about/about.png",
+        "about/style.css",
+        "about/sub.png",
+        "jquery-1.9.0.min.js",
+        "latest_edition_helper.js",
+        "login_link_helper.js",
+        "logo.png",
+        "logol.png",
+        "logop.png",
+        "placeholder.png",
+        "placeholderbg.png",
+        "preview.png",
+        "style.css",
+        "welcomeView.html"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait"
+    ],
+    "params":
+    [
+        {
+            "name": "backgroundColor",
+            "label": "Background colour",
+            "type": "color",
+            "targets": ["body","#header","#footer"],
+            "cssProperty": "background-color",
+            "value": "#001373"
+        },
+        {
+            "name": "foregroundColor",
+            "label": "Foreground colour",
+            "type": "color",
+            "targets": ["#container"],
+            "cssProperty": "background-color",
+            "value": "#ffffff"
+        },
+        {
+            "name": "textColor",
+            "label": "Text colour",
+            "type": "color",
+            "targets": ["#menu li","#footer",".button"],
+            "cssProperty": "color",
+            "value": "#ffffff"
+        },
+        {
+            "name": "buttonColor",
+            "label": "Button colour",
+            "type": "color",
+            "targets": ["#menu li",".button"],
+            "cssProperty": "background-color",
+            "value": "#5bbaea"
+        },
+        {
+            "name": "headerImageLandscape",
+            "label": "Header image (landscape)",
+            "type": "image",
+            "screentypes": ["iPadLandscape"],
+            "targets": ["#header"],
+            "cssProperty": "background-image",
+            "value": "logol.png"
+        },
+        {
+            "name": "headerImagePortrait",
+            "label": "Header image (portrait)",
+            "type": "image",
+            "screentypes": ["iPadPortrait"],
+            "targets": ["#header"],
+            "cssProperty": "background-image",
+            "value": "logop.png"
+        },
+        {
+            "name": "previewButton",
+            "label": "Preview button",
+            "type": "image",
+            "targets": ["#preview a img"],
+            "attribute": "src",
+            "value": "preview.png"
+        },
+        {
+            "name": "previewLink",
+            "label": "Preview button link",
+            "type": "text",
+            "targets": ["#preview a"],
+            "attribute": "href",
+            "value": "category:REPLICA"
+        },
+        {
+            "name": "placeholderBackground",
+            "label": "Edition placeholder background",
+            "type": "image",
+            "targets": ["#placeholder"],
+            "cssProperty": "background-image",
+            "value": "placeholderbg.png"
+        },
+        {
+            "name": "placeholder",
+            "label": "Edition placeholder",
+            "type": "image",
+            "targets": ["#thumb_image"],
+            "attribute": "src",
+            "value": "placeholder.png"
+        },
+        {
+            "name": "button1Text",
+            "label": "Label for button 1",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(1) li"],
+            "replaceContent": true,
+            "value": "MAIL PLUS"
+        },
+        {
+            "name": "button2Text",
+            "label": "Label for button 2",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(2) li"],
+            "replaceContent": true,
+            "value": "REPLICA OF PRINT"
+        },
+        {
+            "name": "button3Text",
+            "label": "Label for button 3",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(3) li"],
+            "replaceContent": true,
+            "value": "ABOUT"
+        },
+        {
+            "name": "button1Link",
+            "label": "Link for button 1",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(1)"],
+            "attribute": "href",
+            "value": "category:MAIL_PLUS"
+        },
+        {
+            "name": "button2Link",
+            "label": "Link for button 2",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(2)"],
+            "attribute": "href",
+            "value": "category:REPLICA"
+        },
+        {
+            "name": "button3Link",
+            "label": "Link for button 3",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(3)"],
+            "attribute": "href",
+            "value": "lightbox:http://www.dmgmedia.co.uk/about-us"
+        },
+        {
+            "name": "content1",
+            "label": "First content panel",
+            "type": "richText",
+            "targets": ["#col2"],
+            "replaceContent": true,
+            "value": "<h1>START YOUR <span>FREE</span> 30-DAY TRIAL NOW</h1><div class='button'>SUBSCRIBE FOR FREE TRIAL</div><a id='latest_link' href='yudu:latest-edition'><div class='button'>BUY TODAY\"S EDITION FOR &#163;0.69</div></a>"
+        },
+        {
+            "name": "content2",
+            "label": "Second content panel",
+            "type": "richText",
+            "targets": ["#content2"],
+            "replaceContent": true,
+            "value": "<h2>You get MORE of the Mail with Mail Plus</h2><p>Mail Plus is the exciting new way to enjoy the Daily Mail and the Mail on Sunday.</p><ul><li>ALL the quality of the print editions, ALL the content - and three magazines</li><li>PLUS more to read, more pictures, more TV, more sport - and video</li><li>PLUS 30 puzzles to play on screen - against the clock</li><li>PLUS Mail Plus includes free access to the replica of the print edition</li></ul><p>For more details tap ABOUT, above right. For back issues, swipe to the next page</p>"
+        },
+        {
+            "name": "footer",
+            "label": "Page footer",
+            "type": "richText",
+            "targets": ["#footertxt"],
+            "replaceContent": true,
+            "value": "<p>If you're already a subscriber through the Mail Plus website please sign in here</p>"
+        }
+    ]
+}

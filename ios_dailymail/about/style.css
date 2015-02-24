@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@media screen and (orientation:portrait){
+#sub{ float: right;
+width: 38%;
+position: absolute;
+top: 345px;
+left: 60%;
+
+}
+}
+
+@media screen and (orientation:landscape){
+#sub{ float: right;
+width: 38%;
+position: absolute;
+top: 780px;
+left: 60%;}
+}

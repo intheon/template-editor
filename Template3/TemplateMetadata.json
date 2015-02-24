@@ -1,0 +1,184 @@
+{
+	"baseLocation": "Template3",
+    "configFilePath": "Branding.js",
+    "files":
+    [
+        "about/about.html",
+        "about/about.png",
+        "about/style.css",
+        "about/sub.png",
+        "jquery-1.9.0.min.js",
+        "latest_edition_helper.js",
+        "login_link_helper.js",
+        "logo.png",
+        "logol.png",
+        "logop.png",
+        "placeholder.png",
+        "placeholderbg.png",
+        "preview.png",
+        "style.css",
+        "welcomeView.html"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait"
+    ],
+    "params":
+    [
+        {
+            "name": "backgroundColor",
+            "label": "Background colour",
+            "type": "color",
+            "targets": ["body","#header","#footer"],
+            "cssProperty": "background-color",
+            "value": "#d7d5cc"
+        },
+        {
+            "name": "foregroundColor",
+            "label": "Foreground colour",
+            "type": "color",
+            "targets": ["#container"],
+            "cssProperty": "background-color",
+            "value": "#ffffff"
+        },
+        {
+            "name": "textColor",
+            "label": "Text colour",
+            "type": "color",
+            "targets": ["#menu li","#footer",".button"],
+            "cssProperty": "color",
+            "value": "#ffffff"
+        },
+        {
+            "name": "buttonColor",
+            "label": "Button colour",
+            "type": "color",
+            "targets": ["#menu li",".button"],
+            "cssProperty": "background-color",
+            "value": "#3ba5dc"
+        },
+        {
+            "name": "headerImageLandscape",
+            "label": "Header image (landscape)",
+            "type": "image",
+            "screentypes": ["iPadLandscape"],
+            "targets": ["#header"],
+            "cssProperty": "background-image",
+            "value": "logol.png"
+        },
+        {
+            "name": "headerImagePortrait",
+            "label": "Header image (portrait)",
+            "type": "image",
+            "screentypes": ["iPadPortrait"],
+            "targets": ["#header"],
+            "cssProperty": "background-image",
+            "value": "logop.png"
+        },
+        {
+            "name": "previewButton",
+            "label": "Preview button",
+            "type": "image",
+            "targets": ["#preview a img"],
+            "attribute": "src",
+            "value": "preview.png"
+        },
+        {
+            "name": "previewLink",
+            "label": "Preview button link",
+            "type": "text",
+            "targets": ["#preview a"],
+            "attribute": "href",
+            "value": "category:ONE"
+        },
+        {
+            "name": "placeholderBackground",
+            "label": "Edition placeholder background",
+            "type": "image",
+            "targets": ["#placeholder"],
+            "cssProperty": "background-image",
+            "value": "placeholderbg.png"
+        },
+        {
+            "name": "placeholder",
+            "label": "Edition placeholder",
+            "type": "image",
+            "targets": ["#thumb_image"],
+            "attribute": "src",
+            "value": "placeholder.png"
+        },
+        {
+            "name": "button1Text",
+            "label": "Label for button 1",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(1) li"],
+            "replaceContent": true,
+            "value": "BUTTON ONE"
+        },
+        {
+            "name": "button2Text",
+            "label": "Label for button 2",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(2) li"],
+            "replaceContent": true,
+            "value": "BUTTON TWO"
+        },
+        {
+            "name": "button3Text",
+            "label": "Label for button 3",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(3) li"],
+            "replaceContent": true,
+            "value": "BUTTON THREE"
+        },
+        {
+            "name": "button1Link",
+            "label": "Link for button 1",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(1)"],
+            "attribute": "href",
+            "value": "category:ONE"
+        },
+        {
+            "name": "button2Link",
+            "label": "Link for button 2",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(2)"],
+            "attribute": "href",
+            "value": "category:TWO"
+        },
+        {
+            "name": "button3Link",
+            "label": "Link for button 3",
+            "type": "text",
+            "targets": ["#menu ul a:nth-child(3)"],
+            "attribute": "href",
+            "value": "category:THREE"
+        },
+        {
+            "name": "content1",
+            "label": "First content panel",
+            "type": "richText",
+            "targets": ["#col2"],
+            "replaceContent": true,
+            "value": "<h1>MOBILE AND DIGITAL PUBLISHING</h1><div class='button'>SUBSCRIBE NOW</div><a id='latest_link' href='yudu:latest-edition'><div class='button'>TODAY'S EDITION</div></a>"
+        },
+        {
+            "name": "content2",
+            "label": "Second content panel",
+            "type": "richText",
+            "targets": ["#content2"],
+            "replaceContent": true,
+            "value": "<h2>Lorem ipsum dolor sit amet, consectetur</h2><p>Sed egestas massa at libero mollis euismod penatibus et dis parturient montes:</p><ul><li>Sed egestas massa at libero mollis euismod</li><li>Etiam interdum vehicula suscipit</li><li>Duis posuere varius adipiscing</li></ul><p>Duis posuere varius adipiscing. Nunc sed consectetur odio. Aliquam erat volutpat.</p>"
+        },
+        {
+            "name": "footer",
+            "label": "Page footer",
+            "type": "richText",
+            "targets": ["#footertxt"],
+            "replaceContent": true,
+            "value": "<p>If you already have a subscription, please sign in here</p>"
+        }
+    ]
+}

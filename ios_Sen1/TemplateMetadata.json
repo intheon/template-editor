@@ -1,0 +1,129 @@
+{
+	"baseLocation": "ios_Sen1",
+    "configFilePath": "Branding.js",
+    "files":
+    [
+        "welcome.css",
+        "welcomeView.html",
+        "jquery-1.9.0.min.js",
+        "fb.jpg",
+        "loader.jpg",
+        "twit.jpg",
+        "logo.png",
+        "bg.png"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait",
+        "iPhone4Landscape",
+        "iPhone4Portrait"
+    ],
+    "params":
+    [
+        {
+            "name": "bgImage",
+            "label": "Background Image",
+            "type": "image",
+            "targets": ["body"],
+            "cssProperty": "background-image",
+            "value": "bg.png"
+        },
+        {
+            "name": "logoImage",
+            "label": "Logo",
+            "type": "image",
+            "targets": ["#logo img"],
+            "attribute": "src",
+            "value": "logo.png"
+        },
+        {
+            "name": "prose",
+            "label": "Text",
+            "type": "richText",
+            "targets": ["#right"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet, eu nullam graeco mediocritatem vel, sea dicat regione iracundia cu, et nemore putant perpetua vel. Amet dicit an mei. Mandamus instructior mei at. Ad usu feugait offendit expetenda. No errem utamur his, mei probo atomorum in, ut utroque mandamus instructior usu.<br /><br />At pri natum assum adipiscing, id pro oratio oporteat contentiones. In ius quaestio sensibus, nam adipisci adipiscing ad. Ei mei dolore oportere. Maiorum luptatum ne sea. Ea mei noster ceteros imperdiet, vim esse corrumpit interesset te. Eum quis laoreet an, eu augue nulla his. Ex ludus appareat sea."
+        },
+        {
+            "name": "butCol",
+            "label": "Button colour",
+            "type": "color",
+            "targets": [".but"],
+            "cssProperty": "background-color",
+            "value": "#3aa4dc"
+        },
+        {
+            "name": "butTxt2",
+            "label": "Button 1",
+            "type": "text",
+            "targets": ["#but2"],
+            "replaceContent": true,
+            "value": "Button 1"
+        },
+        {
+            "name": "butTxt1",
+            "label": "Button 2",
+            "type": "text",
+            "targets": ["#but1"],
+            "replaceContent": true,
+            "value": "Button 2"
+        },
+        {
+            "name": "butTxt3",
+            "label": "Button 3",
+            "type": "text",
+            "targets": ["#but3"],
+            "replaceContent": true,
+            "value": "Button 3"
+        },
+        {
+            "name": "butUrl2",
+            "label": "Button 1 URL",
+            "type": "text",
+            "targets": ["#buttons a:nth-child(2)"],
+            "attribute": "href",
+            "value": "downloads_link"
+        },
+        {
+            "name": "butUrl1",
+            "label": "Button 2 URL",
+            "type": "text",
+            "targets": ["#buttons a:nth-child(1)"],
+            "attribute": "href",
+            "value": "latest_link"
+        },
+        {
+            "name": "butUrl3",
+            "label": "Button 3 URL",
+            "type": "text",
+            "targets": ["#buttons a:nth-child(3)"],
+            "attribute": "href",
+            "value": "editions_link"
+        },
+        {
+            "name": "social",
+            "label": "Display Social Media Buttons? (none/block)",
+            "type": "text",
+            "targets": ["#social"],
+            "cssProperty": "display",
+            "value": "block"
+        },
+        {
+            "name": "soUrl1",
+            "label": "Facebook URL",
+            "type": "text",
+            "targets": ["#social a:nth-child(1)"],
+            "attribute": "href",
+            "value": "https://www.facebook.com/YUDULimited"
+        },
+        {
+            "name": "soUrl2",
+            "label": "Twitter URL",
+            "type": "text",
+            "targets": ["#social a:nth-child(2)"],
+            "attribute": "href",
+            "value": "https://twitter.com/YUDU"
+        }
+    ]
+}

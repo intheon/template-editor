@@ -1,0 +1,26 @@
+[
+	{
+		"entry": "ios_FT/welcomeView.html",
+		"metadata": "ios_FT/TemplateMetadata.json"
+	},
+	{
+		"entry": "ios_Sen1/welcomeView.html",
+		"metadata": "ios_FT/TemplateMetadata.json"
+	},
+	{
+		"entry": "Template1/welcomeView.html",
+		"metadata": "Template1/TemplateMetadata.json"
+	},
+	{
+		"entry": "Template2/welcomeView.html",
+		"metadata": "Template2/TemplateMetadata.json"
+	},
+	{
+		"entry": "Template3/welcomeView.html",
+		"metadata": "Template3/TemplateMetadata.json"
+	},
+	{
+		"entry": "ios_marin/welcomeView.html",
+		"metadata": "ios_marin/TemplateMetadata.json"
+	}
+]

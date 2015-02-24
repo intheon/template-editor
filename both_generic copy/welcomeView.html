@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="welcomeView.css?cachebuster=24"/>
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/welcomeView.js?cachebuster=24"></script>
+    <script src="Branding/Branding.js"></script>
+</head>
+
+<body>
+
+<div id="TopLogo"><img src="Branding/logo.png" /></div>
+<div id="Title">
+
+	<div id="TitleContent"><!--Title placeholder--></div>
+	<div id="TitleLogo"><img src="Branding/TitleLogo.png"</div>
+</div>
+<div id="Content">
+	<div id="Buttons">
+      	<a onclick="showInset();"><div id="ButtonWelcome" class="button">Welcome</div></a>
+      	<a href=""><div id="ButtonLatest" class="button">Latest Editions</div></a>
+      	<a href=""><div id="ButtonAll" class="button">All Editions</div></a>
+		<a href=""><div id="ButtonRegister" class="button">Register</div></a>
+	</div>
+	<div id="Inset" onclick="hideInset();">
+		<div id="InsetContent">
+			<div id="Logo"><img src="Branding/logo.png" /></div>
+			<!--Inset placeholder-->
+		</div>
+	</div>
+</div>
+
+<div id="PoweredBy"><img id="PoweredByLogo" src="powered_by_logo.png"/></div>
+
+<script language="javascript">
+
+function elementIsOrIsChildOf(element, id)
+{
+	while (element)
+	{
+		if (element.id == id) return true;
+		element = element.parentNode;
+	}
+	return false;
+}
+
+function listParents(node)
+{
+	var ret = "";
+	
+	while (node)
+	{
+		ret += node.id + "\n";
+		node = node.parentNode;
+	}
+	
+	return ret;
+}
+
+// Disable touchmove default handling to ensure the welcome page doesn't 'jiggle'.
+// Exclude the 'InsetContent' div and all descendents from this since that needs
+// to scroll!
+document.body.addEventListener('touchmove', function(e){ if(!elementIsOrIsChildOf(e.target, "InsetContent")) e.preventDefault(); });
+initialise();
+</script>
+</body>
+</html>

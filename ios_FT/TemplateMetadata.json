@@ -1,0 +1,275 @@
+{
+	"baseLocation": "ios_FT",
+    "configFilePath": "Branding.js",
+    "files":
+    [
+        "style.css",
+        "welcomeView.html",
+        "latest_edition_image.jpg",
+        "jquery-1.9.0.min.js",
+        "latest_edition_helper.js",
+        "login_link_helper.js",
+        "box1.png",
+        "box2.png",
+        "box3.png",
+        "logo.png"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait",
+        "iPhone4Landscape",
+        "iPhone4Portrait"
+    ],
+    "params":
+    [
+        {
+            "name": "headerBG",
+            "label": "Header Banner Colour",
+            "type": "color",
+            "targets": ["#header"],
+            "cssProperty": "background-color",
+            "value": "#3BA5DC"
+        },
+        {
+            "name": "logoImage",
+            "label": "Logo",
+            "type": "image",
+            "targets": ["#logo"],
+            "cssProperty": "background-image",
+            "value": "logo.png"
+        },
+        {
+            "name": "title",
+            "label": "Title",
+            "type": "text",
+            "targets": ["#left h1"],
+            "replaceContent": true,
+            "value": "Welcome to our App"
+        },
+        {
+            "name": "subTitle",
+            "label": "Sub Title",
+            "type": "text",
+            "targets": ["#left h2"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet, ante ut amet nulla dolor non lectus, amet ut odit lacus vehicula porttitor, luctus malesuada in etiam justo placerat pharetra."
+        },
+        {
+            "name": "desc",
+            "label": "Description",
+            "type": "text",
+            "targets": ["#left p"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet, non feugiat, arcu rhoncus leo, tellus leo hymenaeos. Sit ac, a pede. Lectus imperdiet, nec orci blandit. Felis fermentum morbi, felis vel. Platea nam. Etiam tempore, lacinia ipsum urna, lobortis vestibulum. Habitasse tellus pulvinar. Amet nec risus, in quis."
+        },
+        {
+            "name": "latestTitle",
+            "label": "Latest Title",
+            "type": "text",
+            "targets": ["#latest h5"],
+            "replaceContent": true,
+            "value": "Latest issue"
+        },
+        {
+            "name": "latestButtxt1",
+            "label": "Left Button Text",
+            "type": "text",
+            "targets": ["#buy"],
+            "replaceContent": true,
+            "value": "BUTTON 1"
+        },
+        {
+            "name": "latestButurl1",
+            "label": "Left Button URL",
+            "type": "text",
+            "targets": ["#buy_link"],
+            "attribute": "href",
+            "value": "latest_link"
+        },
+        {
+            "name": "latestButtxt2",
+            "label": "Right Button Text",
+            "type": "text",
+            "targets": ["#login"],
+            "replaceContent": true,
+            "value": "BUTTON 2"
+        },
+        {
+            "name": "latestButurl2",
+            "label": "Right Button URL",
+            "type": "text",
+            "targets": ["#login_link"],
+            "attribute": "href",
+            "value": "login_link"
+        },
+        {
+            "name": "latestButgrad1",
+            "label": "Latest Button Colours",
+            "type": "color",
+            "targets": [".phbutton"],
+            "cssProperty": "background-color",
+            "value": "#3BA5DC"
+        },
+        {
+            "name": "latestButTxtCol",
+            "label": "Latest Button Text Colour",
+            "type": "color",
+            "targets": [".phbutton"],
+            "cssProperty": "color",
+            "value": "#ffffff"
+        },
+        {
+            "name": "dividerTitle",
+            "label": "Divider Text",
+            "type": "text",
+            "targets": ["#break h3"],
+            "replaceContent": true,
+            "value": "See also"
+        },
+        {
+            "name": "colBgGrad1",
+            "label": "Column Background Colour",
+            "type": "color",
+            "targets": [".box"],
+            "cssProperty": "background-color",
+            "value": "#f1f1f1"
+        },
+        {
+            "name": "colButTxtCol",
+            "label": "Column Button Text Colour",
+            "type": "color",
+            "targets": [".button"],
+            "cssProperty": "color",
+            "value": "#ffffff"
+        },
+        {
+            "name": "colButgrad1",
+            "label": "Column Button Colour",
+            "type": "color",
+            "targets": [".button"],
+            "cssProperty": "background-color",
+            "value": "#3BA5DC"
+        },
+        {
+            "name": "colTitle2",
+            "label": "Column 1 Title",
+            "type": "text",
+            "targets": ["#box2 h4"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor"
+        },
+        {
+            "name": "colTxt2",
+            "label": "Column 1 Text",
+            "type": "text",
+            "targets": ["#box2 p"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet justo condimentum eu sem. Nisl wisi euismod. Ligula ad dictum. At vestibulum imperdiet lectus quisque."
+        },
+        {
+            "name": "colButTxt2",
+            "label": "Column 1 Button Text",
+            "type": "text",
+            "targets": ["#box2 .button"],
+            "replaceContent": true,
+            "value": "BUTTON 1"
+        },
+        {
+            "name": "colButUrl2",
+            "label": "Column 1 Button URL",
+            "type": "text",
+            "targets": ["#box2 a"],
+            "attribute": "href",
+            "value": "about:category?cat=CAT2"
+        },
+        {
+            "name": "colTitle1",
+            "label": "Column 2 Title",
+            "type": "text",
+            "targets": ["#box1 h4"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor"
+        },
+        {
+            "name": "colTxt1",
+            "label": "Column 2 Text",
+            "type": "text",
+            "targets": ["#box1 p"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet justo condimentum eu sem. Nisl wisi euismod. Ligula ad dictum. At vestibulum imperdiet lectus quisque."
+        },
+        {
+            "name": "colButTxt1",
+            "label": "Column 2 Button Text",
+            "type": "text",
+            "targets": ["#box1 .button"],
+            "replaceContent": true,
+            "value": "BUTTON 2"
+        },
+        {
+            "name": "colButUrl1",
+            "label": "Column 2 Button URL",
+            "type": "text",
+            "targets": ["#box1 a"],
+            "attribute": "href",
+            "value": "about:category?cat=CAT1"
+        },
+        {
+            "name": "colTitle3",
+            "label": "Column 3 Title",
+            "type": "text",
+            "targets": ["#box3 h4"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor"
+        },
+        {
+            "name": "colTxt3",
+            "label": "Column 3 Text",
+            "type": "text",
+            "targets": ["#box3 p"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet justo condimentum eu sem. Nisl wisi euismod. Ligula ad dictum. At vestibulum imperdiet lectus quisque."
+        },
+        {
+            "name": "colButTxt3",
+            "label": "Column 3 Button Text",
+            "type": "text",
+            "targets": ["#box3 .button"],
+            "replaceContent": true,
+            "value": "BUTTON 3"
+        },
+        {
+            "name": "colButUrl3",
+            "label": "Column 3 Button URL",
+            "type": "text",
+            "targets": ["#box3 a"],
+            "attribute": "href",
+            "value": "about:category?cat=CAT3"
+        },
+        {
+            "name": "col2Img",
+            "label": "Column 1 BG Image (200px 168px)",
+            "type": "image",
+            "targets": ["#boxbg2"],
+            "cssProperty": "background-image",
+            "value": "box1.png"
+        },
+        {
+            "name": "col1Img",
+            "label": "Column 2 BG Image (200px 168px)",
+            "type": "image",
+            "targets": ["#boxbg1"],
+            "cssProperty": "background-image",
+            "value": "box2.png"
+        },
+        {
+            "name": "col3Img",
+            "label": "Column 3 BG Image (200px 168px)",
+            "type": "image",
+            "targets": ["#boxbg3"],
+            "cssProperty": "background-image",
+            "value": "box3.png"
+        }
+    ]
+}

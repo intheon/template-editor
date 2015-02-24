@@ -1,0 +1,76 @@
+{
+	"baseLocation": "ios_marin",
+    "configFilePath": "Branding.js",
+    "files":
+    [
+        "welcome.css",
+        "welcomeView.html",
+        "jquery-1.9.0.min.js",
+        "welcomeView.js",
+        "fb.jpg",
+        "loader.jpg",
+        "twit.jpg",
+        "logo.png",
+        "bg.png"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait",
+        "iPhone4Landscape",
+        "iPhone4Portrait"
+    ],
+    "params":
+    [
+        {
+            "name": "bgImage",
+            "label": "Background Image",
+            "type": "image",
+            "targets": ["body"],
+            "cssProperty": "background-image",
+            "value": "bg.png"
+        },
+        {
+            "name": "logoImage",
+            "label": "Logo",
+            "type": "image",
+            "targets": ["#logo img"],
+            "attribute": "src",
+            "value": "logo.png"
+        },
+        {
+            "name": "prose",
+            "label": "Text",
+            "type": "richText",
+            "targets": ["#right"],
+            "replaceContent": true,
+            "value": "Lorem ipsum dolor sit amet, eu nullam graeco mediocritatem vel, sea dicat regione iracundia cu, et nemore putant perpetua vel. Amet dicit an mei. Mandamus instructior mei at. Ad usu feugait offendit expetenda. No errem utamur his, mei probo atomorum in, ut utroque mandamus instructior usu.<br /><br />At pri natum assum adipiscing, id pro oratio oporteat contentiones. In ius quaestio sensibus, nam adipisci adipiscing ad. Ei mei dolore oportere. Maiorum luptatum ne sea. Ea mei noster ceteros imperdiet, vim esse corrumpit interesset te. Eum quis laoreet an, eu augue nulla his. Ex ludus appareat sea."
+        },
+        {
+            "name": "butCol",
+            "label": "Button colour",
+            "type": "color",
+            "targets": [".but"],
+            "cssProperty": "background-color",
+            "value": "#004990"
+        },
+        {
+			"name": "numberOfButtons",
+			"label": "Number of buttons to display",
+			"type": "radio",
+			"updateMethod": "updateNumberOfButtons",
+			"options":
+			[
+				{"label": "Zero", "value": 0},
+				{"label": "One", "value": 1},
+				{"label": "Two", "value": 2},
+				{"label": "Three", "value": 3},
+				{"label": "Four", "value": 4},
+				{"label": "Five", "value": 5},
+				{"label": "Six", "value": 6}
+			],
+			"callback": "setVisibleButtons",
+			"value": 6
+		}
+    ]
+}

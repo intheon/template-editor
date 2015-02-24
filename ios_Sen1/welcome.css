@@ -1,0 +1,118 @@
+@charset "utf-8";
+body{
+	margin: 0px;
+	background: url(bg.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font: normal 1em Arial, Helvetica, sans-serif;
+}
+
+p {
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	line-height: 20px;
+}
+
+#logo {
+	width: 70%;
+	max-width: 768px;
+	margin: 20px auto 20px auto;
+}
+
+#content {
+	width: 70%;
+	max-width: 768px;
+  height: auto;
+  overflow: hidden;
+	margin: 0px auto 20px auto;
+}
+
+#left {
+	width: 206px;
+	float: left;
+	margin: 0px 20px 0px 0px;
+}
+
+#left img {
+	border: 1px solid #939598;
+}
+
+#right {
+	width: auto;
+  overflow: hidden;
+}
+
+#buttons {
+	width: 70%;
+	max-width: 768px;
+	margin: 0 auto 10px auto;
+	overflow: hidden;
+}
+
+.but {
+	border-radius: 5px;
+	text-align: center;
+  padding: 6px;
+}
+
+#buttons a {
+	font: bold 1em Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+
+#but1 {
+  float: left;
+  width: 29%; margin-left: 36%;
+  position: relative;
+}
+
+#but2 {
+  float: left;
+  width: 29%; margin-left: -64%;
+  position: relative;
+}
+
+#but3 {
+  float: right;
+  width: 29%;
+  position: relative;
+}
+
+#social {
+	display: none;
+	width: 105px;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+}
+
+@media all and (max-width: 599px){
+
+  #right {
+    float: none;
+    overflow: visible;
+  }
+
+  #left {
+    float: none;
+    margin: 0 auto 20px auto;
+  }
+
+  #logo {
+   	width: 70%;
+  }
+
+  #but1, #but2, #but3 {
+    float: none;
+    width: 90%;
+    max-width: 250px;
+    margin: 0px auto 10px auto;
+  }
+
+}

@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+<script src="jquery-1.9.0.min.js"></script>
+<script src="Branding.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="container">
+    <div id="menu">
+      <ul>
+        <a href="category:MAIL_PLUS"><li>MAIL PLUS</li>
+        <a href="category:REPLICA"><li>REPLICA OF PRINT</li>
+        <a href="lightbox:http://www.dmgmedia.co.uk/about-us"><li>ABOUT</li></a>
+      </ul>
+    </div>
+    
+    <div id="content">
+      <div id="col1">
+        <div id="placeholder">
+          <div id="edition">
+            <a id="latest_link" href="yudu:latest-edition"><img id="thumb_image" src="placeholder.png" width="100%" /></a>
+          </div>
+          <div id="preview">
+            <a href="category:REPLICA"><img src="preview.png" width="99%" /></a>
+          </div>
+        </div>
+      </div>
+      <div id="col2">
+      </div>
+    </div>
+
+    <div id="content2">
+    </div>
+
+  <div id="footer">
+    <div id="footertxt">
+    </div>
+    <div id="signin">
+      <a id="login_link" href="#"><div class="button">SIGN IN</div></a>
+      
+    </div>
+  </div>
+  
+<script language="javascript">
+$('#menu ul a:nth-child(1) li').html(button1Text);
+$('#menu ul a:nth-child(1)').attr('href', button1Link);
+$('#menu ul a:nth-child(2) li').html(button2Text);
+$('#menu ul a:nth-child(2)').attr('href', button2Link);
+$('#menu ul a:nth-child(3) li').html(button3Text);
+$('#menu ul a:nth-child(3)').attr('href', button3Link);
+
+$('#col2').html(content1);
+$('#content2').html(content2);
+$('#footertxt').html(footer);
+
+$('#preview a').attr('href', previewLink);
+
+$('body,#header,#footer').css('background-color', backgroundColor);
+$('#menu li,#footer,.button').css('color', textColor);
+$('#container').css('background-color', foregroundColor);
+$('#menu li,.button').css('background-color', buttonColor);
+
+</script>
+
+<script src="login_link_helper.js"></script> 
+<script src="latest_edition_helper.js" ></script>
+
+</body>
+</html>

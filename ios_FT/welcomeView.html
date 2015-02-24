@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script src="Branding.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="logo"><img src="logo.png" width="100%" /></div>
+      <div id="latest">
+        <h5></h5>
+        <div id="arrow"></div>
+      </div>
+    </div>
+
+    <div id="middle">
+      <div id="right">
+        <a class="latest_link" href=""><img id="thumb_image" src="loader.jpg" class="placeholder" width="176px" /></a>
+
+        <a href="">
+          <div id="buy" class="phbutton"></div>
+        </a>
+
+        <a href="">
+          <div id="login" class="phbutton"></div>
+        </a>
+      </div>
+      <div id="left">
+        <h1></h1>
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+    <div id="break">
+      <h3></h3>
+    </div>
+    <div id="boxes">
+      <div id="box1" class="box">
+        <h4></h4>
+        <p></p>
+        <a href=""><div class="button"></div></a>
+        <div id="boxbg1" class="boximg"></div>
+      </div>
+      <div id="box2" class="box">
+        <h4></h4>
+        <p></p>
+        <a href=""><div class="button"></div></a>
+        <div id="boxbg2" class="boximg"></div>
+      </div>
+      <div id="box3" class="box">
+        <h4></h4>
+        <p></p>
+        <a href=""><div class="button"></div></a>
+       <div id="boxbg3" class="boximg"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $('#header').css('background-color', headerBG);
+      $('#arrow').css('border-top-color', headerBG);
+
+      $('#left h1').text(title);
+      $('#left h2').text(subTitle);
+      $('#left p').text(desc);
+
+      $('#latest h5').text(latestTitle);
+
+      $('#buy').text(latestButtxt1);
+      $('#right a:nth-child(2)').attr('href', latestButurl1);
+      $('#login').text(latestButtxt2);
+      $('#right a:nth-child(3)').attr('href', latestButurl2);
+//      $('.phbutton').css(
+//        'background','-moz-linear-gradient(top, ' + latestButgrad1 + ' 0%, ' + latestButgrad2 + ' 100%'
+//      );
+//      $('.phbutton').css(
+//        'background','-webkit-linear-gradient(top, ' + latestButgrad1 + ' 0%, ' + latestButgrad2 + ' 100%'
+//      );
+      $('.phbutton').css('background-color', latestButgrad1);
+      $('h5, .phbutton').css('color', latestButTxtCol);
+
+      $('#break h3').text(dividerTitle);
+
+//      $('.box').css(
+//        'background','-moz-linear-gradient(top, ' + colBgGrad1 + ' 0%, ' + colBgGrad2 + ' 100%'
+//      );
+//      $('.box').css(
+//        'background','-webkit-linear-gradient(top, ' + colBgGrad1 + ' 0%, ' + colBgGrad2 + ' 100%'
+//      );
+
+      $('.box').css('background-color', colBgGrad1);
+
+//      $('.button').css(
+//        'background','-moz-linear-gradient(top, ' + colButgrad1 + ' 0%, ' + colButgrad2 + ' 100%'
+//      );
+//      $('.button').css(
+//        'background','-webkit-linear-gradient(top, ' + colButgrad1 + ' 0%, ' + colButgrad2 + ' 100%'
+//      );
+
+      $('.button').css('background-color', colButgrad1);
+      $('.button').css('color', colButTxtCol);
+
+      $('#box1 h4').text(colTitle1);
+      $('#box1 p').text(colTxt1);
+      $('#box1 .button').text(colButTxt1);
+      $('#box1 a').attr('href', colButUrl1);
+      $('#box3 .boximg img').attr('src', colButUrl1);
+
+      $('#box2 h4').text(colTitle2);
+      $('#box2 p').text(colTxt2);
+      $('#box2 .button').text(colButTxt2);
+      $('#box2 a').attr('href', colButUrl2);
+
+      $('#box3 h4').text(colTitle3);
+      $('#box3 p').text(colTxt3);
+      $('#box3 .button').text(colButTxt3);
+      $('#box3 a').attr('href', colButUrl3);
+
+
+      $('#boxes a, #right a').each(function() {
+        but = $(this).attr('href');
+        if(but == 'latest_link' || but == 'editions_link' || but == 'subscriptions_link' || but == 'downloads_link' || but == 'login_link' || but == 'logout_link') {
+          $(this).addClass(but);       
+        }
+      });
+
+    </script>
+  </body>
+</html>

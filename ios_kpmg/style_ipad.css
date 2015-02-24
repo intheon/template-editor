@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+@media screen and (orientation:portrait){
+
+	body { 
+		background-image: url(b_p.png);
+		background-size: 768px 1024px;
+	}
+
+	#bottom_wrapper { 
+		overflow: hidden; 
+		padding-right: 50px; 
+		padding-left: 50px; 
+		height: auto; 
+		width: auto; 
+		margin: 0px; 
+		padding-top: 25px; 
+		padding-bottom: 50px; 
+		clear: left;
+	}
+
+	#thumb_wrapper { 
+		float: left; 
+		max-width: 400px; 
+		height: auto; 
+		padding-right: 25px; 
+		padding-bottom: 0px; 
+		padding-left: 50px; 
+		padding-top: 360px;
+	}
+
+}
+
+@media screen and (orientation:landscape){
+
+	body { 
+		background-image: url(b_l.png); 
+		background-size: 1024px 768px;
+	}
+
+	#bottom_wrapper { 
+		float: left; 
+		overflow: hidden; 
+		padding-right: 50px; 
+		height: auto; 
+		margin: 0px; 
+		padding-top: 340px; 
+		width:440px; 
+		padding-bottom: 25px;
+	}
+
+	#thumb_wrapper { 
+		float: left; 
+		max-width: 400px; 
+		height: auto; 
+		padding-right: 25px; 
+		padding-bottom: 0px; 
+		padding-left: 40px; 
+		padding-top: 350px;
+	}
+
+}
+
+/* GLOBAL VALUES */ 
+
+h1 { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 2.8em; 
+	font-weight: normal; 
+	color: #fff; 
+	text-decoration: none; 
+	margin: 0px; 
+	padding: 0px;
+}
+
+p { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 1em; 
+	font-weight: normal; 
+	color: #fff; 
+	text-decoration: none; 
+	margin: 0px; 
+	padding: 0px;
+}
+
+a.register { 
+	float: left; 
+	display: block; 
+	text-align:center; 
+	width: auto; 
+	height: auto; 
+	background: #883494; 
+	padding: 8px; 
+	margin: 5px; 
+	text-decoration: none; 
+	color: #fff; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 0.9em; 
+	font-weight: normal; 
+	border-radius: 10px; 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#883494), color-stop(100%,#A876B4));
+}
+
+#thumb_image {
+	border-radius: 4px; 
+	position: relative; 
+	-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; 
+	height: 240px; 
+	margin-top: 3px; 
+	margin-right: 3px; 
+	margin-bottom: 1em; 
+	margin-left: 3px; 
+	background-color: #FFF;
+}
+

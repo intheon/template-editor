@@ -31,7 +31,6 @@ Yudu.TemplateEditor.PreviewManager = function(templateData, previewDataSource, s
 		positionThumbnails();
 		createToolbar();
 	}
-
 	function createToolbar()
 	{
 		var frame = $('<div></div>').attr('id', 'ToolbarFrame');
@@ -45,10 +44,19 @@ Yudu.TemplateEditor.PreviewManager = function(templateData, previewDataSource, s
 				.append($('<option/>')
 					.attr('value', ii)
 					.html(screen.name))
-				.change(function() { manager.changeMainPreview();});
+				.change(function() { 
+					changeMainPreview();
+					//manager.changeMainPreview();
+				});
 		}
 		
 		frame.append(dropdown);
+
+		frame.append($('<input/>')
+		.attr('type', 'button')
+		.attr('value', '  Save and download  ')
+		.click(function () { Yudu.TemplateEditor.DownloadManager.createAndDownloadZip(manager.templateData) }));
+
 		frame.append(makeToolbarButton('ZoomInButton', function()
 		{
 			zoomDefaults.increaseZoom();
@@ -63,10 +71,7 @@ Yudu.TemplateEditor.PreviewManager = function(templateData, previewDataSource, s
 		}));
 		
 		frame.append(makeToolbarButton('ToggleThumbnailsButton', function() { $('.miniPreviewDiv').toggle(); }));
-		frame.append($('<input/>')
-			.attr('type', 'button')
-			.attr('value', '  Save and download  ')
-			.click(function () { Yudu.TemplateEditor.DownloadManager.createAndDownloadZip(manager.templateData) }));
+
 		$('body').append(frame);
 	};
 	
@@ -293,6 +298,7 @@ Yudu.TemplateEditor.PreviewManager = function(templateData, previewDataSource, s
 	
 		if (param.callback)
 		{
+
 			// Lots of safety checking before triggering the callback, because we're
 			// calling a function specified by the template designer with a value 
 			// provided by the user.
@@ -330,12 +336,15 @@ Yudu.TemplateEditor.PreviewManager = function(templateData, previewDataSource, s
 			// Now execute the callback.
 			for (var ii = 0; ii < $(targetClass).length; ++ii)
 			{
+
 				var iFrame = $(targetClass).get(ii);
 				var innerWindow = iFrame.contentWindow;
 				
 				if (innerWindow[param.callback])
 				{
-					innerWindow[param.callback](newValue);
+					//console.log("new val: ", newValue);
+					//console.log("param: ", param.name);
+					innerWindow[param.callback](newValue,param.name);
 				}
 			}
 		}

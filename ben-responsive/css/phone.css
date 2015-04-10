@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@media screen and (orientation:portrait){
+
+
+
+}
+
+@media screen and (orientation:landscape){
+
+
+
+}
+
+html,body
+{
+	background-color: white;
+}

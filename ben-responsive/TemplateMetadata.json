@@ -1,0 +1,160 @@
+{
+	"baseLocation": "ben-responsive",
+    "configFilePath": "js/branding.js",
+    "files":
+    [
+        "css/normalize.css",
+        "css/skeleton.css",
+        "css/phone.css",
+        "css/tablet.css",
+        "js/device_detect.js",
+        "js/jquery.js",
+        "js/welcomeView.js",
+        "js/latest_edition_helper.js",
+        "img/favicon.png",
+        "img/header.png",
+        "img/thumbnail.png",
+        "welcomeView.html"
+    ],
+    "screens":
+    [
+        "iPadLandscape",
+        "iPadPortrait",
+        "iPhone4Landscape",
+        "iPhone4Portrait",
+        "iPhone5Landscape",
+        "iPhone5Portrait",
+        "iPhone6Landscape",
+        "iPhone6Portrait",
+        "iPhone6PlusLandscape",
+        "iPhone6PlusPortrait",
+        "nexus7Landscape",
+        "nexus7Portrait"
+    ],
+    "params":
+    [
+        {
+            "name": "welcomeHeader",
+            "label": "Welcome Header",
+            "type": "text",
+            "targets": [".header"],
+            "replaceContent": true,
+            "value": "Welcome"
+        },
+        {
+            "name": "welcomeText",
+            "label": "Welcome Text",
+            "type": "richText",
+            "targets": [".main-text"],
+            "replaceContent": true,
+            "value": "Bacon ipsum dolor amet sint frankfurter qui laborum culpa cillum. Dolore aliquip officia rump ham tail lorem, bresaola filet mignon shankle capicola nulla. Incididunt landjaeger turkey andouille jerky, ullamco short loin dolor nisi duis. Rump meatloaf shoulder qui. Ut short ribs biltong porchetta culpa do consequat shoulder dolor andouille occaecat ipsum. Capicola eiusmod drumstick cow."
+        },
+        {
+            "name": "header",
+            "label": "Header Image",
+            "type": "image",
+            "attribute": "src",
+            "targets": [".header-image"],
+            "value": "img/header.png"
+        },
+        {
+            "name": "thumbnail",
+            "label": "Default Thumbnail Image",
+            "type": "image",
+            "attribute": "src",
+            "targets": [".thumbnail"],
+            "value": "img/thumbnail.png"
+        },
+        {
+            "name": "numberOfButtons",
+            "label": "Number of buttons to display",
+            "type": "radio",
+            "updateMethod": "updateNumberOfButtons",
+            "replaceContent": true,
+            "options":
+            [
+                {"label": "0", "value": 0},
+                {"label": "1", "value": 1},
+                {"label": "2", "value": 2},
+                {"label": "3", "value": 3}
+            ],
+            "callback": "setVisibleButtons",
+            "value": 3
+        },
+        {
+            "name": "button1_Text",
+            "label": "Button 1 Label",
+            "type": "text",
+            "targets": ["#buttonOne"],
+            "replaceContent": true,
+            "value": "Buy Editions"
+        },
+        {
+            "name": "button1_MagicLink",
+            "label": "Button 1 Magic Link",
+            "type": "radio",
+            "updateMethod": "updateNumberOfButtons",
+            "replaceContent": true,
+            "options":
+            [
+                {"label": "Latest Edition", "value": "latest"},
+                {"label": "My Editions", "value": "editions"},
+                {"label": "My Downloads", "value": "downloads"},
+                {"label": "Log in", "value": "login"},
+                {"label": "Log Out", "value": "logout"}
+            ],
+            "callback": "applyMagicLinks",
+            "value": "latest"
+        },
+        {
+            "name": "button2_Text",
+            "label": "Button 2 Label",
+            "type": "text",
+            "targets": ["#buttonTwo"],
+            "replaceContent": true,
+            "value": "Log In"
+        },
+        {
+            "name": "button2_MagicLink",
+            "label": "Button 2 Magic Link",
+            "type": "radio",
+            "updateMethod": "updateNumberOfButtons",
+            "replaceContent": true,
+            "options":
+            [
+                {"label": "Latest Edition", "value": "latest"},
+                {"label": "My Editions", "value": "editions"},
+                {"label": "My Downloads", "value": "downloads"},
+                {"label": "Log in", "value": "login"},
+                {"label": "Log Out", "value": "logout"}
+            ],
+            "callback": "applyMagicLinks",
+            "value": "latest"
+        },
+        {
+            "name": "button3_Text",
+            "label": "Button 3 Label",
+            "type": "text",
+            "targets": ["#buttonThree"],
+            "replaceContent": true,
+            "value": "Visit Our Site"
+        },
+        {
+            "name": "button3_MagicLink",
+            "label": "Button 3 Magic Link",
+            "type": "radio",
+            "updateMethod": "updateNumberOfButtons",
+            "replaceContent": true,
+            "options":
+            [
+                {"label": "Latest Edition", "value": "latest"},
+                {"label": "My Editions", "value": "editions"},
+                {"label": "My Downloads", "value": "downloads"},
+                {"label": "Log in", "value": "login"},
+                {"label": "Log Out", "value": "logout"}
+            ],
+            "callback": "applyMagicLinks",
+            "value": "latest"
+        }
+    ]
+}

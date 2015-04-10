@@ -20,6 +20,7 @@ Yudu.TemplateEditor = Yudu.TemplateEditor || {};
 //=============================================================================
 Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 {
+
 	var selector = this;
 	var control = null;
 	var revertHandler = null;
@@ -52,10 +53,10 @@ Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 		var controlDiv;
 		var undoButton = $('<img src="UndoIcon.png" class="undoButton"/>')
 			.click(revert);
-		
+
 		if (param.type == 'richText')
 		{
-			var label = $('<span class="selectorLabelFullWidth"></span>')
+			var label = $('<span class="selectorLabel"></span>')
 				.append(param.label)
 				.append(undoButton);
 			var selectorDiv = $('<div class="selector"></div>')
@@ -65,7 +66,7 @@ Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 		}
 		else
 		{
-			var selectorDiv = $('<div class="selector"></div>')
+			var selectorDiv = $('<div class="selector" data-selector-name="'+param.name+'"></div>')
 				.append($('<span class="selectorLabel"></span>')
 				.append(param.label));
 			controlDiv = $('<span class="selectorControl"></span>')
@@ -263,6 +264,10 @@ Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 		selector.control = $('<input type="text" style="display: none"/>').attr('id', param.name);
 		parentDiv.append(selector.control);
 
+		var parentForm = $("<form></form>")
+			.attr('name', param.name + "Form");
+			parentDiv.append(parentForm);
+
 		for (index = 0; index < param.options.length; ++index)
 		{
 			var option = param.options[index];
@@ -271,21 +276,27 @@ Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 			{
 				Yudu.TemplateEditor.Error.throwFatalError('Option #' + index + ' on param ' + param.name + ' is missing data - each option must have a label and a value.');
 			}
+
+
 			
 			var radioButton = $('<input></input>')
 				.attr('type', 'radio')
 				.attr('name', param.name)
 				.attr('value', option.value)
+				.attr('id', "option_" + option.value + "_" + param.name)
 				.change(makeRadioChangeHandler(option.value));
 				
 			if (option.value == param.value)
 			{
 				radioButton.prop('checked', true);
 			}
-			
-			parentDiv.append(radioButton);
-			parentDiv.append(option.label);
-			parentDiv.append($('<br/>'));
+
+			parentForm.append(radioButton)
+			parentForm.append('<label for="option_'+option.value+'_'+param.name+'">' + option.label + '</label>');
+
+
+			//parentDiv.append();
+			//parentDiv.append($('<br/>'));
 		}
 		
 		selector.revertHandler = function()
@@ -297,10 +308,13 @@ Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 	
 	function makeRadioChangeHandler(newValue)
 	{
+
 		return function()
 		{
 			selector.control.val(newValue);
 			valueChanged(newValue);
+			hideChildInputs(newValue);
+
 		}
 	}
 	
@@ -315,6 +329,39 @@ Yudu.TemplateEditor.Selector = function(baseLocation, param, changeHandler)
 		
 		valueChanged(param.value);
 		
+	}
+
+	function hideChildInputs(elementsToShow)
+	{
+		// right now this can only be called onChange of a radio button
+		// basically you have a radio button that displays the number of buttons in the preview
+		// i also want it to show/hide the corresponding input elements
+
+		if (isNaN(elementsToShow))
+		{
+			return false;
+		}
+		else
+		{
+			if (elementsToShow === 0)
+			{
+				$("div[data-selector-name^='button']").fadeOut(function(){
+					$(this).hide();
+				});
+			}
+			else if (elementsToShow > 0)
+			{
+				$("div[data-selector-name^='button']").fadeOut(function(){
+					$(this).hide();
+				});
+
+				for (count = 1; count <= elementsToShow; count++)
+				{
+					$("div[data-selector-name^='button"+count+"']").fadeIn();
+				}
+			}
+		}
+
 	}
 	
 	return (

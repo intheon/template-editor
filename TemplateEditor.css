@@ -1,6 +1,16 @@
 body
 {
 	font-family: Sans-Serif;
+	margin:0px;
+	padding:0px;
+background: #ebebf4;
+background: -moz-linear-gradient(top, #ebebf4 0%, #f9faff 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebf4), color-stop(100%,#f9faff));
+background: -webkit-linear-gradient(top, #ebebf4 0%,#f9faff 100%);
+background: -o-linear-gradient(top, #ebebf4 0%,#f9faff 100%);
+background: -ms-linear-gradient(top, #ebebf4 0%,#f9faff 100%);
+background: linear-gradient(to bottom, #ebebf4 0%,#f9faff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebf4', endColorstr='#f9faff',GradientType=0 );
 }
 
 h1
@@ -19,8 +29,6 @@ img.imageThumbnail
 
 div.imageThumbnail
 {
-	width: 150px;
-	height: 100px;
 	text-align: center;
 	vertical-align: center;
 	font-size: 28px;
@@ -30,6 +38,7 @@ div.imageThumbnail
 	background-position: center center;
 	color: rgba(0,0,0,0);
 	border: solid 10px white;
+	height: 100px;
 }
 
 div.imageThumbnail:hover
@@ -39,27 +48,30 @@ div.imageThumbnail:hover
 
 div.dropTarget
 {
-	width: 130px;
-	height: 80px;
-	border: dashed 10px white;
+	width: 82%;
+	height: 56%;
 	text-align: center;
 	vertical-align: center;
-	font-size: 24px;
+	font-size: 1.3em;
 	position: absolute;
-	padding: 10px;
+	margin: 3%;
+	padding:3%;
 	top: 0;
 	left: 0;
 	opacity: 0;
 	color: rgba(0,0,0,0);
-	background-color: rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0);
+	border: dotted 1px;
 }
 
 div.dropTarget:hover
 {
-	border: dashed 10px black;
-	border-radius: 15px;
+	border: dotted 1px #AFAFAF;
+	background-color: #F1F1F1;
+	border-radius: 6px;
 	color: rgba(0,0,0,1);
-	opacity: 1;
+	opacity: 0.8;
+	cursor: help;
 }
 
 div.imageLabel
@@ -123,38 +135,108 @@ img.undoButton
 
 #SelectorFrame
 {
+	width:30%;
 	position: fixed;
-	float: left;
-	width: 330px;
-	height: 100%;
-	border: groove thick brown;
-	padding: 5px;
-	overflow-y: scroll;
+	right: 0;
+	border-left: 1px solid #bbbbbb;
 	z-index: 1;
 	background: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
 }
 
 .selector
 {
+	padding: 0px;
 	width: 100%;
-	padding: 5px 0;
-	border-top: solid thin silver;
-	border-bottom: solid thin gray;
 }
 
 .selectorLabel
 {
-	width: 130px;
+	color:#686868;
+	background-color:#E7E7E7;
+	float:left;
+	text-align: center;
+	width:100%;
+	font-size:	1em;
+  	letter-spacing: .1rem;
+	border-bottom:1px solid #bbbbbb;
+	white-space: nowrap;
 	display: inline-block;
-	vertical-align: middle;
 }
 
 .selectorControl
 {
-	width: 200px;
+	background-color:#FFFFFF;
+	width:100%;
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
+	float:left;
+}
+
+.selectorControl input[type="text"]
+{
+	margin-top:3%;
+	margin-left:3%;
+	width: 94%;
+}
+
+form
+{
+	padding:1.5%;
+	margin:1.5%;
+	display:	flex;
+}
+.selectorControl label
+{
+	flex:1;
+	text-align: center;
+	padding:3%;
+	font-size:1em;
+}
+
+.dragIcon
+{
+	position:fixed;
+	top:0;
+	right:0;
+	margin-right:18%;
+	margin-top:0.5%;
+}
+
+.dragIcon:hover
+{
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+.highlighted
+{
+	color:red;
+}
+.selectorControl input[type="radio"]
+{
+	display:none;
+}
+
+
+.selectorControl input[type="radio"]:checked + label
+{
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+	border-bottom: 1px solid;
+	color:#DB3340;
+	background-color: #FDF2F5;
+}
+
+label:hover
+{
+	cursor: pointer;
+	color:#DB3340;
 }
 
 .selectorLabelFullWidth
@@ -167,11 +249,14 @@ img.undoButton
 
 .selectorControlFullWidth
 {
-	width: 100%;
 	display: inline-block;
 	vertical-align: middle;
-	padding: 10px 0 0 10px;
+	padding-bottom:2%;
+	width:100%;
+	padding-left:3%;
 }
+
+
 
 .textInput
 {
@@ -180,9 +265,10 @@ img.undoButton
 
 #ToolbarFrame
 {
+	width:auto;
 	position: fixed;
 	top: 0;
-	left: 360px;
+	left: 0;
 	height: 30px;
 	padding: 5px;
 }
@@ -192,7 +278,7 @@ img.undoButton
 	float: left;
 	position: fixed;
 	top: 40px;
-	left: 360px;
+	left: 0;
 	width: 3000px;
 	height: 1500px;
 	overflow-x: scroll;
@@ -229,18 +315,16 @@ img.undoButton
 
 .toolbarButton
 {
-	margin: 2px;
-	width: 25px;
-	height: 25px;
-	background-color: #ebebeb;
-	background-size: 25px 25px;
-	border: outset 1px gray;
-	border-radius: 4px;
+	margin-left:4px !important;
+	width: 25px !important;
+	height: 25px !important;
+	background-size: 47px auto !important;
+	background-repeat:no-repeat;
 }
 
 .toolbarButton:active
 {
-	border: inset 1px gray;
+	border: inset 1px gray  !important;
 }
 
 .toolbarButton:disabled
@@ -252,6 +336,7 @@ img.undoButton
 #ZoomInButton
 {
 	background-image: url('ZoomIn.png');
+
 }
 
 #ZoomOutButton
@@ -262,6 +347,7 @@ img.undoButton
 #ToggleThumbnailsButton
 {
 	background-image: url('eye-icon.png');
+	background-size: 22px auto !important;
 }
 
 #ProgressIndicatorMessageBox

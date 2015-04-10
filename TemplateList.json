@@ -22,5 +22,9 @@
 	{
 		"entry": "ios_marin/welcomeView.html",
 		"metadata": "ios_marin/TemplateMetadata.json"
+	},
+	{
+		"entry": "ben-responsive/welcomeView.html",
+		"metadata": "ben-responsive/TemplateMetadata.json"
 	}
 ]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>welcome to our app</title>
+
+	<meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
+	<meta charset="utf-8">
+
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+
+	<script type="text/javascript" src="js/device_detect.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/branding.js"></script>
+
+</head>
+<body>
+<!-- BEGIN PAGE CONTENT -->
+
+	<div class="container">
+
+		<!-- a lovely company logo -->
+		<div class="row">
+			<img src="img/header.png" class="u-max-full-width header-image">
+		</div>
+
+		<!-- our thumbnail and text -->
+		<div class="row">
+			<a href="#"><img src="img/thumbnail.png" class="round one-third column thumbnail" id="latest_edition_image"></a>
+			<div class="round two-thirds column"><h3 class="header"></h3><span class="main-text"></div>
+		</div>
+
+		<!-- some buttons -->
+		<div class="row bump" id="buttonContainer">
+			<a href="#" class="button button-primary one-third column" id="buttonOne"></a>
+			<a href="#" class="button button-primary one-third column" id="buttonTwo"></a>
+			<a href="#" class="button button-primary one-third column" id="buttonThree"></a>
+		</div>
+	</div>
+
+<!-- welcomeView.js applies the values of branding.js to the document. It's in its own file to keep JS and HTML separate. It also has reference to all the callback functions - it also changes the magic links to be appropriate for that platform -->
+
+<script type="text/javascript" src="js/welcomeView.js"></script>
+
+<!-- TODO: Add this in for Android builds
+<script type="text/javascript" src="js/latest_edition_helper.js"></script>
+-->
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+welcomeHeader = "Welcome";
+welcomeText = "Bacon ipsum dolor amet sint frankfurter qui laborum culpa cillum. Dolore aliquip officia rump ham tail lorem, bresaola filet mignon shankle capicola nulla. Incididunt landjaeger turkey andouille jerky, ullamco short loin dolor nisi duis. Rump meatloaf shoulder qui. Ut short ribs biltong porchetta culpa do consequat shoulder dolor andouille occaecat ipsum. Capicola eiusmod drumstick cow.";
+bodyBackgroundColor = "#FFFFFF";
+button1_Text = "Buy Editions";
+button2_Text = "Log In";
+button3_Text = "Visit Our Site";
+buttonOneClass = "editions_link";
+buttonTwoClass = "login_link";
+buttonThreeClass = "subscriptions_link";
+buttonColour = "#33C3F0";

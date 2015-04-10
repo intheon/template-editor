@@ -1,3 +1,4 @@
+
 var Yudu = window.Yudu || {};
 Yudu.TemplateEditor = Yudu.TemplateEditor || {};
 
@@ -141,6 +142,8 @@ Yudu.TemplateEditor.Editor = function(params)
 				previewManager.updatePreviewForParam);
 			selector.createControl(selectorFrame);
 		}
+
+		makeDraggable("SelectorFrame");
 	}
 
 	function addDivAtTopLevel(id)
@@ -148,6 +151,13 @@ Yudu.TemplateEditor.Editor = function(params)
 		var ret = $('<div></div>').attr('id', id);
 		$('body').append(ret);
 		return ret;
+	}
+
+	function makeDraggable(id)
+	{
+		/*$("#"+id).append("<div class='dragIcon'><img src='drag-icon.png' width='14%'></div>");
+
+		$("#"+id).resizable();*/
 	}
 	
 	return (
